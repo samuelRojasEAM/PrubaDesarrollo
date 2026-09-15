@@ -3,19 +3,19 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class cliente {
+public class Cliente {
     private int id;
     private String nombre;
     private int telefono;
     private String correo;
     private boolean prestado;
 
-    private static List<cliente> listaClientes = new ArrayList<>();
+    private static List<Cliente> listaClientes = new ArrayList<>();
 
-    public cliente() {
+    public Cliente() {
     }
 
-    public cliente(int id, String nombre, int telefono, String correo) {
+    public Cliente(int id, String nombre, int telefono, String correo) {
         this.id = id;
         this.nombre = nombre;
         this.telefono = telefono;
@@ -62,8 +62,8 @@ public class cliente {
         this.prestado = prestado;
     }
 
-    public static void crearCliente(cliente nuevoCliente) {
-        for (cliente c : listaClientes) {
+    public static void crearCliente(Cliente nuevoCliente) {
+        for (Cliente c : listaClientes) {
             if (c.getId() == nuevoCliente.getId()) {
                 System.out.println("El cliente con id " + nuevoCliente.getId() + " ya existe.");
                 return;
@@ -73,12 +73,12 @@ public class cliente {
         System.out.println("Cliente agregado correctamente.");
     }
 
-    public static List<cliente> listarClientes() {
+    public static List<Cliente> listarClientes() {
         return listaClientes;
     }
 
-    public static cliente buscarCliente(int id) {
-        for (cliente c : listaClientes) {
+    public static Cliente buscarCliente(int id) {
+        for (Cliente c : listaClientes) {
             if (c.getId() == id) {
                 return c;
             }
@@ -87,7 +87,7 @@ public class cliente {
     }
 
     public static boolean actualizarCliente(int id, String nombre, int telefono, String correo) {
-        cliente c = buscarCliente(id);
+        Cliente c = buscarCliente(id);
         if (c == null) {
             return false;
         }
@@ -98,7 +98,7 @@ public class cliente {
     }
 
     public static boolean eliminarCliente(int id) {
-        cliente c = buscarCliente(id);
+        Cliente c = buscarCliente(id);
         if (c == null) {
             return false;
         }
@@ -110,7 +110,7 @@ public class cliente {
         if (listaClientes.isEmpty()) {
             System.out.println("No hay clientes registrados.");
         } else {
-            for (cliente c : listaClientes) {
+            for (Cliente c : listaClientes) {
                 System.out.println("ID: " + c.getId() + " | Nombre: " + c.getNombre()
                         + " | Telefono: " + c.getTelefono() + " | Correo: " + c.getCorreo());
             }        }        } }
