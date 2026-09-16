@@ -1,4 +1,5 @@
 package modelo;
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.Scanner;
 import
@@ -104,4 +105,9 @@ public class Main {
         sc.nextLine(); 
         return valor;
     }
+=======
+
+public class Main {
+    
+>>>>>>> origin/samuel
 }
