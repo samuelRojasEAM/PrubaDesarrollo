@@ -1,16 +1,14 @@
 package modelo;
-
 import java.time.LocalDate;
-
 public class Prestamo {
     private Libro libro;
-    //private Cliente cliente;
+    private Cliente cliente;
     private LocalDate fechaPrestamo;
     private LocalDate fechaDevolucion;
 
-    public Prestamo(Libro libro) {
+    public Prestamo(Libro libro, Cliente cliente) {
         this.libro = libro;
-        //this.cliente = cliente;
+        this.cliente = cliente;
         this.fechaPrestamo = LocalDate.now();
         this.fechaDevolucion = null;
     }
@@ -19,9 +17,9 @@ public class Prestamo {
         return libro;
     }
 
-    //public Cliente getCliente() {
-    //    return cliente;
-    //}
+    public Cliente getCliente() {
+        return cliente;
+    }
 
     public LocalDate getFechaPrestamo() {
         return fechaPrestamo;
