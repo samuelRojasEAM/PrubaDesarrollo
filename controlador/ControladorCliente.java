@@ -3,11 +3,7 @@ import java.util.List;
 import modelo.Cliente;
 
 public class ControladorCliente {
- private static ArrayList<Cliente> clientes;
-
-    public ControladorCliente() {
-        this.clientes = new ArrayList<>();
-    }
+    private static ArrayList<Cliente> clientes = new ArrayList<>(); // se inicializa una sola vez
 
     public static void crearCliente(Cliente nuevoCliente) {
         for (Cliente c : clientes) {
@@ -53,13 +49,23 @@ public class ControladorCliente {
         return true;
     }
 
+    // Método pedido: mostrar info de un cliente puntual
+    public static void mostrarInformacionCliente(int id) {
+        Cliente c = buscarCliente(id);
+        if (c != null) {
+            System.out.println(c);
+        } else {
+            System.out.println("El cliente con ID " + id + " no existe.");
+        }
+    }
+
     public static void mostrarClientes() {
         if (clientes.isEmpty()) {
             System.out.println("No hay clientes registrados.");
         } else {
             for (Cliente c : clientes) {
-                System.out.println("ID: " + c.getId() + " | Nombre: " + c.getNombre()
-                        + " | Telefono: " + c.getTelefono() + " | Correo: " + c.getCorreo());
-            }        }        }
-
+                System.out.println(c);
+            }
+        }
+    }
 }
