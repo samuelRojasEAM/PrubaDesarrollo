@@ -52,7 +52,7 @@ public class Cliente {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
-    
+
     public boolean isPrestado() {
         return prestado;
     }
@@ -60,5 +60,4 @@ public class Cliente {
     public void setPrestado(boolean prestado) {
         this.prestado = prestado;
     }
-
-     }
+}

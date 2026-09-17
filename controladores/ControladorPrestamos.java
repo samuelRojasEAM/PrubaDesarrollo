@@ -5,6 +5,7 @@ import modelo.Cliente;
 import modelo.Libro;
 import modelo.Prestamo;
 
+
 public class ControladorPrestamos {
     private static ArrayList<Prestamo> prestamos = new ArrayList<>();
     private static int contadorId = 1;

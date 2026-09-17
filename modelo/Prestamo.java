@@ -7,12 +7,10 @@ public class Prestamo {
     private LocalDate fechaPrestamo;
     private LocalDate fechaDevolucion;
 
-<<<<<<< HEAD
-    public Prestamo(Libro libro, Cliente cliente) {
-=======
+
+
     public Prestamo(int id, Libro libro, Cliente cliente) {
         this.id = id;
->>>>>>> origin/samuel
         this.libro = libro;
         this.cliente = cliente;
         this.fechaPrestamo = LocalDate.now();
